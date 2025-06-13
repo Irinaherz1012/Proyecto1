@@ -1,0 +1,456 @@
+@charset "UTF-8";
+@import url(../abstracts/variables);
+.btn {
+  display: inline-block;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #e2daae;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-padding {
+  padding: 80px 0;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #333;
+}
+h2 i {
+  margin-left: 10px;
+  color: #64E2B7;
+}
+
+h1, h3, h4 {
+  font-family: "Montserrat", sans-serif;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  background-color: #FBF3C1;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+  box-shadow: rgba(47, 10, 48, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 100;
+  font-size: 1.8rem;
+  color: #64E2B7;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.logo i {
+  margin-left: 8px;
+  font-size: 1.5rem;
+}
+
+footer {
+  background-color: #D50B8B;
+  color: #f4f4f4;
+  padding: 50px 0;
+  text-align: center;
+}
+footer .footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+  text-align: left;
+}
+footer .footer-section {
+  flex: 1;
+  min-width: 200px;
+  max-width: 300px;
+}
+footer .footer-section h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #64E2B7;
+}
+footer .footer-section p,
+footer .footer-section ul li a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+footer .footer-section ul {
+  list-style: none;
+}
+footer .footer-section ul li a:hover {
+  color: #64E2B7;
+  text-decoration: underline;
+}
+footer .social-links {
+  margin-top: 15px;
+}
+footer .social-links a {
+  color: #f4f4f4;
+  font-size: 1.5rem;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+footer .social-links a:hover {
+  color: #64E2B7;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.nav-list li {
+  position: relative;
+  margin-left: 30px;
+}
+.nav-list li a {
+  text-decoration: none;
+  color: · #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: 5px 0;
+  display: block;
+}
+.nav-list li a:hover {
+  color: #64E2B7;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #FBF3C1;
+  box-shadow: rgba(47, 10, 48, 0.1);
+  min-width: 200px;
+  border-radius: 8px;
+  padding: 10px 0;
+  z-index: 100;
+  list-style: none;
+}
+.dropdown-menu li {
+  margin: 0;
+}
+.dropdown-menu li a {
+  padding: 10px 20px;
+  color: #333;
+  white-space: nowrap;
+}
+.dropdown-menu li a:hover {
+  background-color: #e2daae;
+  color: #64E2B7;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 1100;
+}
+.menu-toggle .bar {
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.menu-toggle.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.btn {
+  padding: 12px 25px;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  background-color: #64E2B7;
+  color: #f4f4f4;
+}
+.btn-primary:hover {
+  background-color: #D50B8B;
+  transform: translateY(-2px);
+  box-shadow: rgba(47, 10, 48, 0.1);
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  background-color: #DC8BE0;
+  color: #f4f4f4;
+}
+.btn-secondary:hover {
+  background-color: #64E2B7;
+  transform: translateY(-2px);
+  box-shadow: rgba(47, 10, 48, 0.1);
+}
+
+.dropdown {
+  position: relative;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #FBF3C1;
+  box-shadow: rgba(47, 10, 48, 0.1);
+  border-radius: 8px;
+  padding: 10px 0;
+  min-width: 200px;
+  z-index: 100;
+}
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+  white-space: nowrap;
+}
+.dropdown-menu li a:hover {
+  background-color: #e2daae;
+  color: #64E2B7;
+}
+
+#hero {
+  background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), url("../images/hero.jpg") no-repeat center center/cover;
+  color: #FBF3C1;
+  text-align: center;
+  padding: 150px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+}
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.producto-card {
+  background-color: #FBF3C1;
+  border-radius: 8px;
+  box-shadow: rgba(47, 10, 48, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+.producto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: rgba(0, 0, 0, 0.2);
+}
+.producto-card img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+.producto-card .producto-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.producto-card .producto-info h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+.producto-card .producto-info .descripcion {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+.producto-card .producto-info .precio {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #64E2B7;
+  margin-bottom: 15px;
+}
+.producto-card .producto-info .btn {
+  align-self: flex-start;
+  width: auto;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #FBF3C1;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: rgba(47, 10, 48, 0.1);
+}
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+.contact-form .form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+}
+.contact-form .form-group input[type=text],
+.contact-form .form-group input[type=email],
+.contact-form .form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+}
+.contact-form .form-group textarea {
+  resize: vertical;
+}
+.contact-form button[type=submit] {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+  border-radius: 50px;
+}
+
+#ofertas {
+  background-color: #e2daae;
+}
+
+.oferta-item {
+  display: flex;
+  align-items: center;
+  background-color: #FBF3C1;
+  border-radius: 8px;
+  box-shadow: rgba(47, 10, 48, 0.1);
+  padding: 20px;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.oferta-item:hover {
+  transform: translateY(-5px);
+  box-shadow: rgba(0, 0, 0, 0.2);
+}
+.oferta-item img {
+  width: 150px;
+  height: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+.oferta-item h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+}
+.oferta-item p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.precio-oferta {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #64E2B7;
+  margin-bottom: 10px;
+}
+
+.precio-original {
+  text-decoration: line-through;
+  color: #888;
+  font-weight: 400;
+  margin-right: 10px;
+  font-size: 1rem;
+}/*# sourceMappingURL=main.css.map */

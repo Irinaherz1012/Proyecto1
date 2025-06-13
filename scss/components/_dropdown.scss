@@ -1,0 +1,38 @@
+// components/_dropdown.scss
+
+// Ya está mayormente cubierto en navigation, pero puedes tener ajustes extra aquí si deseas modularizar más:
+.dropdown {
+  position: relative;
+
+  &:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #FBF3C1;
+  @include box-shadow($shadow-light);
+  border-radius: $border-radius;
+  padding: 10px 0;
+  min-width: 200px;
+  z-index: 100;
+
+  li {
+    a {
+      display: block;
+      padding: 10px 20px;
+      color: $text-dark;
+      white-space: nowrap;
+
+      &:hover {
+        background-color: $bg-light;
+        color: $primary-color;
+      }
+    }
+  }
+}
+

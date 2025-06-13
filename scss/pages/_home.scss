@@ -1,0 +1,56 @@
+// pages/_home.scss
+
+#ofertas {
+  background-color: $bg-light;
+}
+
+.oferta-item {
+  display: flex;
+  align-items: center;
+  background-color: #FBF3C1;
+  border-radius: $border-radius;
+  @include box-shadow($shadow-light);
+  padding: 20px;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: rgba(0, 0, 0, 0.2);
+  }
+
+  img {
+    width: 150px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: $border-radius;
+    margin-right: 20px;
+  }
+
+  h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+  }
+
+  p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+  }
+}
+
+.precio-oferta {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: $primary-color;
+  margin-bottom: 10px;
+}
+
+.precio-original {
+  text-decoration: line-through;
+  color: #888;
+  font-weight: 400;
+  margin-right: 10px;
+  font-size: 1rem;
+}

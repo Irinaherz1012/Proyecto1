@@ -1,0 +1,24 @@
+.btn {
+  @extend %btn;
+  padding: 12px 25px;
+}
+
+.btn-primary {
+  @include button($primary-color, $text-light);
+
+  &:hover {
+    background-color: $bg-dark;
+    transform: translateY(-2px);
+    @include box-shadow($shadow-light);
+  }
+}
+
+.btn-secondary {
+  @include button($secondary-color, $text-light);
+
+  &:hover {
+    background-color: $primary-color;
+    transform: translateY(-2px);
+    @include box-shadow($shadow-light);
+  }
+}

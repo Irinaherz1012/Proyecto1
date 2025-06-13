@@ -1,0 +1,16 @@
+// components/_hero.scss
+
+#hero {
+  background: linear-gradient(
+      rgba(44, 62, 80, 0.7), 
+      rgba(44, 62, 80, 0.7)
+    ),
+    url('../images/hero.jpg') no-repeat center center / cover;
+  color: #FBF3C1;
+  text-align: center;
+  padding: 150px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+}
